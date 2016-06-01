@@ -19,3 +19,22 @@ int removeElement(int* nums, int numsSize, int val) {
     }
     return numsSize;
 }
+
+int removeElement(int A[], int n, int elem) {
+    int begin=0;
+    for(int i=0;i<n;i++) if(A[i]!=elem) A[begin++]=A[i];
+    return begin;
+}
+
+int removeElement(int A[], int n, int elem) {
+    int i = 0;
+    while (i < n) {
+        if (A[i] == elem) {
+            A[i] = A[n - 1];
+            n--;
+        }
+        else
+            i++;
+    }
+    return n;
+}
